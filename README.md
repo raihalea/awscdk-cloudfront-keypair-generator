@@ -44,7 +44,9 @@ cdk deploy
 
 ## Important Note
 
-**Disclaimer:** This project is meant for experimental purposes. Using EC2 KeyPairs for CloudFront KeyPairs is not a recommended or supported practice in production environments. It’s a fun demonstration of what’s possible with AWS CDK, but for real-world applications, please follow the standard best practices for CloudFront KeyPairs.
+**Disclaimer:** **Disclaimer:** This project is for fun and learning. Using EC2 KeyPairs for CloudFront KeyPairs is not a recommended or supported practice in production environments.  
+It’s a fun demonstration of what’s possible with AWS CDK, but for real-world applications, please follow the standard best practices for CloudFront KeyPairs.
+
 
 ## License
 
