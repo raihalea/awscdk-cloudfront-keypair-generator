@@ -47,17 +47,7 @@ export class CloudFrontKeyPairGenerator extends Construct {
     );
 
     publicKeyParamter.grantWrite(onEvent);
-
-    const now = new Date();
-    const threeHoursLater = new Date(now.getTime() + 3 * 60 * 60 * 1000);
-    this.privateKeyParameter.grantRead(onEvent).principalStatements.forEach((statement) => {
-      statement.addConditions(
-        {
-          DateGreaterThan: { 'aws:CurrentTime': now.toISOString() },
-          DateLessThan: { 'aws:CurrentTime': threeHoursLater.toISOString() },
-        },
-      );
-    });
+    this.privateKeyParameter.grantRead(onEvent);
 
     const cloudFrontKeyPairProvider = new Provider(
       this,
